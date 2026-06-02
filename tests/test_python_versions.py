@@ -1,0 +1,21 @@
+import pickle
+import hashlib
+import sys
+
+def pickle_hash(obj):
+    data = pickle.dumps(obj)
+    return hashlib.sha256(data).hexdigest()
+
+test_obj = {
+    "user": "Hiba",
+    "numbers": [1, 2, 3],
+    "active": True
+}
+
+hash1 = pickle_hash(test_obj)
+hash2 = pickle_hash(test_obj)
+print("Python version:", sys.version)
+print("Test object:")
+print(hash1)
+print(hash2)
+print("Same hash:", hash1 == hash2)
