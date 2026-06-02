@@ -1,0 +1,55 @@
+import pickle
+import hashlib
+
+def pickle_hash(obj):
+    data = pickle.dumps(obj)
+    return hashlib.sha256(data).hexdigest()
+
+float_obj = {
+    "value1": 0.1,
+    "value2": 0.2,
+    "sum": 0.1 + 0.2
+}
+
+float_hash1 = pickle_hash(float_obj)
+float_hash2 = pickle_hash(float_obj)
+print("Floating point values:")
+print(float_hash1)
+print(float_hash2)
+print("Same hash:", float_hash1 == float_hash2)
+
+#NaN value
+nan_obj = {
+    "value": float("nan")
+}
+
+nan_hash1 = pickle_hash(nan_obj)
+nan_hash2 = pickle_hash(nan_obj)
+
+print("\nNaN value:")
+print(nan_hash1)
+print(nan_hash2)
+print("Same hash:", nan_hash1 == nan_hash2)
+
+#Infinity
+inf_obj = {
+    "value": float("inf")
+}
+inf_hash1 = pickle_hash(inf_obj)
+inf_hash2 = pickle_hash(inf_obj)
+
+print("\nInfinity value:")
+print(inf_hash1)
+print(inf_hash2)
+print("Same hash:", inf_hash1 == inf_hash2)
+
+#Set
+set_obj = {1, 2, 3, 4, 5}
+
+set_hash1 = pickle_hash(set_obj)
+set_hash2 = pickle_hash(set_obj)
+
+print("\nSet:")
+print(set_hash1)
+print(set_hash2)
+print("Same hash:", set_hash1 == set_hash2)
