@@ -53,3 +53,34 @@ print("\nSet:")
 print(set_hash1)
 print(set_hash2)
 print("Same hash:", set_hash1 == set_hash2)
+
+#Tuple
+tuple_obj = ("Saja", 21, ("course", "testing"))
+
+tuple_hash1 = pickle_hash(tuple_obj)
+tuple_hash2 = pickle_hash(tuple_obj)
+
+print("\nTuple:")
+print(tuple_hash1)
+print(tuple_hash2)
+print("Same hash:", tuple_hash1 == tuple_hash2)
+
+
+# TC-12: Dictionary insertion order
+dict1 = {}
+dict1["a"] = 1
+dict1["b"] = 2
+dict1["c"] = 3
+
+dict2 = {}
+dict2["c"] = 3
+dict2["b"] = 2
+dict2["a"] = 1
+
+dict1_hash = pickle_hash(dict1)
+dict2_hash = pickle_hash(dict2)
+
+print("\nDictionary insertion order:")
+print(dict1_hash)
+print(dict2_hash)
+print("Same hash:", dict1_hash == dict2_hash)
