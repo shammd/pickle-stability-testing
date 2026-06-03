@@ -1,3 +1,4 @@
+#This is the Edge Cases Test
 import pickle
 import hashlib
 
@@ -5,6 +6,7 @@ def pickle_hash(obj):
     data = pickle.dumps(obj)
     return hashlib.sha256(data).hexdigest()
 
+#Test Case: Checks if normal floating point values produce identical hashes
 float_obj = {
     "value1": 0.1,
     "value2": 0.2,
@@ -18,7 +20,8 @@ print(float_hash1)
 print(float_hash2)
 print("Same hash:", float_hash1 == float_hash2)
 
-#NaN value
+
+#Test Case: How pickle handles NaN values
 nan_obj = {
     "value": float("nan")
 }
@@ -31,7 +34,7 @@ print(nan_hash1)
 print(nan_hash2)
 print("Same hash:", nan_hash1 == nan_hash2)
 
-#Infinity
+#Test Case: How pickle handles infinity values
 inf_obj = {
     "value": float("inf")
 }
@@ -43,7 +46,7 @@ print(inf_hash1)
 print(inf_hash2)
 print("Same hash:", inf_hash1 == inf_hash2)
 
-#Set
+#Test Case: Checks if sets produce stable pickle output
 set_obj = {1, 2, 3, 4, 5}
 
 set_hash1 = pickle_hash(set_obj)
@@ -54,7 +57,7 @@ print(set_hash1)
 print(set_hash2)
 print("Same hash:", set_hash1 == set_hash2)
 
-#Tuple
+#Test Case: Checks if tuples produce stable pickle output
 tuple_obj = ("Saja", 21, ("course", "testing"))
 
 tuple_hash1 = pickle_hash(tuple_obj)
@@ -66,7 +69,7 @@ print(tuple_hash2)
 print("Same hash:", tuple_hash1 == tuple_hash2)
 
 
-# TC-12: Dictionary insertion order
+#Test Case: Dictionary insertion order
 dict1 = {}
 dict1["a"] = 1
 dict1["b"] = 2

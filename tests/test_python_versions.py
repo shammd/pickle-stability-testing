@@ -1,3 +1,4 @@
+#This is the Python Version Test
 import pickle
 import hashlib
 import sys
@@ -6,6 +7,7 @@ def pickle_hash(obj):
     data = pickle.dumps(obj)
     return hashlib.sha256(data).hexdigest()
 
+#Test Case:Checks if same object produces identical hashes in the current Python version
 test_obj = {
     "user": "Hiba",
     "numbers": [1, 2, 3],

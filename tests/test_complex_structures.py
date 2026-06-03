@@ -1,9 +1,12 @@
+#This is the Complex Structures Test
 import pickle
 import hashlib
 
 def pickle_hash(obj):
     data = pickle.dumps(obj)
     return hashlib.sha256(data).hexdigest()
+
+#Test Case: Checks if nested dictionaries and lists produce identical hashes
 obj = {
     "users": [
         {"name": "Sham", "age": 21},
@@ -19,6 +22,7 @@ print(hash1)
 print(hash2)
 print("Same hash:", hash1 == hash2)
 
+#Test Case: Checks if deeply nested structures produce identical hashes
 deep_obj = {
     "course": {
         "module": {
@@ -39,6 +43,7 @@ print(deep_hash1)
 print(deep_hash2)
 print("Same hash:", deep_hash1 == deep_hash2)
 
+#Test Case: Checks if recursive self-referencing lists are pickled consistently
 recursive_list = []
 recursive_list.append(recursive_list)
 
@@ -55,6 +60,8 @@ class Student:
         self.age = age
 
 
+#Test Case: Checks if a custom class instance produces identical hashes
+
 student = Student("Sham", 21)
 student_hash1 = pickle_hash(student)
 student_hash2 = pickle_hash(student)
@@ -64,6 +71,7 @@ print(student_hash1)
 print(student_hash2)
 print("Same hash:", student_hash1 == student_hash2)
 
+#Test Case: Checks if multiple custom class objects produce stable hashes
 students = [
     Student("Sham", 21),
     Student("Hiba", 22)
