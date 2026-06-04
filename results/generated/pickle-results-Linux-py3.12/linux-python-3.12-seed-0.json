@@ -1,0 +1,149 @@
+{
+  "environment": {
+    "created_at_utc": "2026-06-04T19:32:43.157409+00:00",
+    "os": "Linux",
+    "platform": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
+    "python": "3.12.13 (main, Mar  4 2026, 02:26:36) [GCC 13.3.0]",
+    "python_short": "3.12",
+    "pickle_default_protocol": 4,
+    "pickle_highest_protocol": 5,
+    "python_hash_seed": "0"
+  },
+  "scripts": [
+    {
+      "script": "tests/test_complex_structures.py",
+      "exit_code": 0,
+      "hashes": [
+        "41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967",
+        "41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967",
+        "148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69",
+        "148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69",
+        "86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2",
+        "86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2",
+        "ff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291",
+        "ff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291",
+        "b2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1",
+        "b2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1"
+      ],
+      "hash_groups": [
+        {
+          "name": "Nested structure",
+          "hashes": [
+            "41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967",
+            "41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967"
+          ]
+        },
+        {
+          "name": "Deep nested structure",
+          "hashes": [
+            "148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69",
+            "148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69"
+          ]
+        },
+        {
+          "name": "Recursive list",
+          "hashes": [
+            "86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2",
+            "86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2"
+          ]
+        },
+        {
+          "name": "Custom class object",
+          "hashes": [
+            "ff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291",
+            "ff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291"
+          ]
+        },
+        {
+          "name": "Multiple objects of same class",
+          "hashes": [
+            "b2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1",
+            "b2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1"
+          ]
+        }
+      ],
+      "output": "Nested structure:\n41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967\n41276f0d4816f992226b2a05efa00de3a716e210ca4ae8a37433f121dfea3967\nSame hash: True\nRound-trip type preserved: True\n\nDeep nested structure:\n148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69\n148f2fd87a848ac7c3fe93ee7829cb02c18b0c9580c6588837cf0757d610ab69\nSame hash: True\nRound-trip type preserved: True\n\nRecursive list:\n86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2\n86dc462a0a5b079247e5f114fc256ec30e1e31b7a7d28965ea18ec2021941dc2\nSame hash: True\nRound-trip type preserved: True\n\nCustom class object:\nff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291\nff5c4250eb846493730f4c4ca62e7f4a8a07bdcf24f27452dae0856e8885c291\nSame hash: True\nRound-trip type preserved: True\n\nMultiple objects of same class:\nb2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1\nb2d7d346f11a3b91569ef027dffef9c3a4165cbb3b122cb8058146397ddbadd1\nSame hash: True\nRound-trip type preserved: True\n"
+    },
+    {
+      "script": "tests/test_edge_cases.py",
+      "exit_code": 0,
+      "hashes": [
+        "db8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee",
+        "db8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee",
+        "f32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077",
+        "f32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077",
+        "65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e",
+        "65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e",
+        "f98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229",
+        "f98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229",
+        "6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25",
+        "6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25",
+        "c5e8a924d1f9a56579043eb2f6c78c5b26e1c44345f2afc7ed8456c8f2e8e080",
+        "5e958a2185ee05066062a786d0943ff9c9b8fe0ab82fc62a4d690c53be9b61e4"
+      ],
+      "hash_groups": [
+        {
+          "name": "Floating point values",
+          "hashes": [
+            "db8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee",
+            "db8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee"
+          ]
+        },
+        {
+          "name": "NaN value",
+          "hashes": [
+            "f32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077",
+            "f32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077"
+          ]
+        },
+        {
+          "name": "Infinity value",
+          "hashes": [
+            "65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e",
+            "65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e"
+          ]
+        },
+        {
+          "name": "Set",
+          "hashes": [
+            "f98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229",
+            "f98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229"
+          ]
+        },
+        {
+          "name": "Tuple",
+          "hashes": [
+            "6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25",
+            "6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25"
+          ]
+        },
+        {
+          "name": "Dictionary insertion order",
+          "hashes": [
+            "c5e8a924d1f9a56579043eb2f6c78c5b26e1c44345f2afc7ed8456c8f2e8e080",
+            "5e958a2185ee05066062a786d0943ff9c9b8fe0ab82fc62a4d690c53be9b61e4"
+          ]
+        }
+      ],
+      "output": "Floating point values:\ndb8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee\ndb8a30c8a30d786ca65a04764a4188e21dce115e51a1ca32e3304accf564deee\nSame hash: True\nRound-trip type preserved: True\n\nNaN value:\nf32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077\nf32bbeb8d70953a20265b821537a60cef102a26163c55598ec4ff9db924fa077\nSame hash: True\nRound-trip type preserved: True\n\nInfinity value:\n65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e\n65fa74718c30e2f87d95759f132f2307eea5ad45e5353de3a0cf403384fd818e\nSame hash: True\nRound-trip type preserved: True\n\nSet:\nf98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229\nf98347fca4650cb922c19cf6c0bc5df2cec4e16854a0a8dc0a680a2908386229\nSame hash: True\nRound-trip type preserved: True\n\nTuple:\n6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25\n6fe6170485a6895d2037ba95ea69655c311a1a84ea38b99fdc60deda90af1e25\nSame hash: True\nRound-trip type preserved: True\n\nDictionary insertion order:\nc5e8a924d1f9a56579043eb2f6c78c5b26e1c44345f2afc7ed8456c8f2e8e080\n5e958a2185ee05066062a786d0943ff9c9b8fe0ab82fc62a4d690c53be9b61e4\nSame hash: False\nRound-trip type preserved dict1: True\nRound-trip type preserved dict2: True\n"
+    },
+    {
+      "script": "tests/test_python_versions.py",
+      "exit_code": 0,
+      "hashes": [
+        "8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644",
+        "8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644"
+      ],
+      "hash_groups": [
+        {
+          "name": "Test object",
+          "hashes": [
+            "8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644",
+            "8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644"
+          ]
+        }
+      ],
+      "output": "Python version: 3.12.13 (main, Mar  4 2026, 02:26:36) [GCC 13.3.0]\nTest object:\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\nSame hash: True\n"
+    }
+  ]
+}
