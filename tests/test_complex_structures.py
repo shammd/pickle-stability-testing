@@ -6,6 +6,11 @@ def pickle_hash(obj):
     data = pickle.dumps(obj)
     return hashlib.sha256(data).hexdigest()
 
+def roundtrip_check(obj):
+    data = pickle.dumps(obj)
+    loaded = pickle.loads(data)
+    return type(loaded) is type(obj)
+
 #Test Case: Checks if nested dictionaries and lists produce identical hashes
 obj = {
     "users": [
@@ -21,6 +26,7 @@ print("Nested structure:")
 print(hash1)
 print(hash2)
 print("Same hash:", hash1 == hash2)
+print("Round-trip type preserved:", roundtrip_check(obj))
 
 #Test Case: Checks if deeply nested structures produce identical hashes
 deep_obj = {
@@ -42,6 +48,7 @@ print("\nDeep nested structure:")
 print(deep_hash1)
 print(deep_hash2)
 print("Same hash:", deep_hash1 == deep_hash2)
+print("Round-trip type preserved:", roundtrip_check(deep_obj))
 
 #Test Case: Checks if recursive self-referencing lists are pickled consistently
 recursive_list = []
@@ -53,6 +60,7 @@ print("\nRecursive list:")
 print(recursive_hash1)
 print(recursive_hash2)
 print("Same hash:", recursive_hash1 == recursive_hash2)
+print("Round-trip type preserved:", roundtrip_check(recursive_list))
 
 class Student:
     def __init__(self, name, age):
@@ -70,6 +78,7 @@ print("\nCustom class object:")
 print(student_hash1)
 print(student_hash2)
 print("Same hash:", student_hash1 == student_hash2)
+print("Round-trip type preserved:", roundtrip_check(student))
 
 #Test Case: Checks if multiple custom class objects produce stable hashes
 students = [
@@ -83,3 +92,4 @@ print("\nMultiple objects of same class:")
 print(students_hash1)
 print(students_hash2)
 print("Same hash:", students_hash1 == students_hash2)
+print("Round-trip type preserved:", roundtrip_check(students))
