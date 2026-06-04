@@ -14,6 +14,10 @@ test_obj = {
     "active": True
 }
 
+# Compare pickle output across Python versions
+# Serialize the same object twice and compare hashes
+# SHA256 is used to verify whether the pickle output is identical
+
 hash1 = pickle_hash(test_obj)
 hash2 = pickle_hash(test_obj)
 print("Python version:", sys.version)

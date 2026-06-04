@@ -11,7 +11,6 @@ TC-12: Dictionary insertion order
 
 # Results
 -Most test cases produced identical hashes when the same object was serialized twice.
-
 -The dictionary insertion order test produced different hashes. This happened because the dictionaries had the same keys and values, but the items were inserted in a different order.
 
 # Conclusion
