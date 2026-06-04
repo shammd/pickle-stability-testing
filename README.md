@@ -6,6 +6,15 @@ The goal of this project is to investigate whether Python pickle produces stable
 
 ## How to Run
 
+### Run all current tests with metadata
+
+```bash
+python utils/run_tests.py
+```
+
+This runs the existing test scripts, records environment metadata, and writes
+JSON/Markdown output to `results/generated/`.
+
 ### Complex structures
 
 ```bash

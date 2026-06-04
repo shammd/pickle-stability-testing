@@ -1,0 +1,50 @@
+name: Pickle Matrix Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  run-existing-tests:
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-24.04
+          - windows-2025
+          - macos-15-intel
+        python-version:
+          - "3.10"
+          - "3.11"
+          - "3.12"
+    env:
+      PYTHONHASHSEED: "0"
+      PYTHONIOENCODING: utf-8
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run unchanged pickle scripts through wrapper
+        run: python utils/run_tests.py
+
+      - name: Upload generated result files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pickle-results-${{ runner.os }}-py${{ matrix.python-version }}
+          path: results/generated/
+          if-no-files-found: error
