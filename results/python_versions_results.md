@@ -18,11 +18,10 @@ Determine whether the same object produces identical pickle output across differ
 | 3.14 | ab8d65928aaaa339fdc4a6962b6160b4e8fee051d123d6e30ded962b2f574468 |
 
 ## Analysis
-Repeated serializations within each Python version produced identical hashes.
-Python 3.12 and Python 3.13 generated the same hash.
-Python 3.14 generated a different hash.
 
-This indicates that pickle was deterministic within each version, but the serialized output wasn't fully reproducible across all tested Python versions.
+Repeated serializations within each Python version produced identical SHA256 hashes. This means that pickle behaved deterministically when the same object was serialized more than once in the same Python environment.
+
+Python 3.12 and Python 3.13 generated the same hash, which means the pickle byte stream was identical between those two versions. Python 3.14 generated a different hash for the same object. This suggests that the pickle output can change between Python versions, even when the input object stays the same.
 
 ## Conclusion
-The same object can produce different pickle outputs when serialized using different Python versions.
+The results show that pickle was stable within each tested Python version, but not fully reproducible across all tested Python versions.
