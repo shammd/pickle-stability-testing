@@ -38,6 +38,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Clear old generated results
+        run: python -c "import shutil; shutil.rmtree('results/generated', ignore_errors=True)"
+
       - name: Run unchanged pickle scripts through wrapper
         run: python utils/run_tests.py
 
