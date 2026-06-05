@@ -40,6 +40,10 @@ py -3.12 -m uv run --python 3.14 python tests/test_python_versions.py
 ## Tested Environments
 
 - Windows
+- Linux
+- macOS
+- Python 3.10
+- Python 3.11
 - Python 3.12
 - Python 3.13
 - Python 3.14
