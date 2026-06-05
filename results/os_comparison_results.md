@@ -20,16 +20,8 @@ Raw results are stored in:
 
 ```text
 results/generated/
-
-Raw results are stored in:
-
-```text
-results/generated/
 ```
 
-## Executed Test Cases
-
-The operating system comparison included:
 ## Executed Test Cases
 
 The operating system comparison included all project test cases:
@@ -46,3 +38,13 @@ The operating system comparison included all project test cases:
 - Python version comparison
 - Tuple object
 - Dictionary insertion order
+
+## Analysis
+
+The results were the same across Windows, Linux, and macOS. For each Python version, the hashes matched between the three operating systems, so we did not find any OS-specific differences in these tests.
+
+There were differences between Python versions. Python 3.12 and 3.13 gave the same hashes, while Python 3.14 produced different hashes for several cases. This is probably because Python 3.14 used pickle default protocol 5, while Python 3.12 and 3.13 used default protocol 4.
+
+The dictionary insertion order test also produced two different hashes on every operating system. This was not caused by the OS. It happened because the two dictionaries had the same keys and values, but were created in a different order.
+
+Things that could affect the results include the Python version, pickle protocol, `PYTHONHASHSEED`, object construction order, and the exact runner environment used by GitHub Actions.
