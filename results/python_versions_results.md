@@ -1,7 +1,6 @@
-# Person 1 – Python Version Testing
+# Python Version Testing
 
 ## Environment
-
 - Python 3.12
 - Python 3.13
 - Python 3.14
@@ -21,7 +20,7 @@ Determine whether the same object produces identical pickle output across differ
 
 Our results show that the pickle module works consistently within the same Python version. Every time we serialized the same object, we got the same SHA256 hash.
 
-When comparing different Python versions, Python 3.12 and 3.13 produced the same hash, while Python 3.14 produced a different one. This is likely because of changes made to the pickle module between versions.
+When comparing different Python versions, Python 3.12 and 3.13 produced the same hash, while Python 3.14 produced a different one. This may be caused by changes in how Python 3.14 serializes this object.
 
 We also used different development setups during testing. One team member used "uv", while another used a standard Python installation. Since both setups produced the same hashes, we know that the difference comes from Python 3.14 itself and not from the tools used to manage the environment.
 
