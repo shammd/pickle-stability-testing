@@ -1,10 +1,10 @@
 {
   "environment": {
-    "created_at_utc": "2026-06-04T19:32:53.863864+00:00",
+    "created_at_utc": "2026-06-05T16:14:01.156929+00:00",
     "os": "Windows",
-    "platform": "Windows-10-10.0.26100-SP0",
-    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
-    "python_short": "3.10",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "python_short": "3.13",
     "pickle_default_protocol": 4,
     "pickle_highest_protocol": 5,
     "python_hash_seed": "0"
@@ -143,7 +143,7 @@
           ]
         }
       ],
-      "output": "Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]\nTest object:\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\nSame hash: True\n"
+      "output": "Python version: 3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]\nTest object:\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\n8e43502463b1b94aac0e1d1bc761e4391b100230e8d00d229216d22535425644\nSame hash: True\n"
     }
   ]
 }

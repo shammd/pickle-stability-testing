@@ -2,9 +2,9 @@
 
 ## Environment
 
-- OS: Darwin
-- Platform: `macOS-15.7.7-x86_64-i386-64bit`
-- Python: `3.10.20 (main, Mar  3 2026, 15:34:59) [Clang 17.0.0 (clang-1700.0.13.5)]`
+- OS: Linux
+- Platform: `Linux-6.17.0-1015-azure-x86_64-with-glibc2.39`
+- Python: `3.13.13 (main, Apr 30 2026, 14:44:12) [GCC 13.3.0]`
 - Pickle default protocol: 4
 - PYTHONHASHSEED: `0`
 

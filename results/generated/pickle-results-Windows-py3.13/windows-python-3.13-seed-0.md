@@ -3,8 +3,8 @@
 ## Environment
 
 - OS: Windows
-- Platform: `Windows-10-10.0.26100-SP0`
-- Python: `3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]`
+- Platform: `Windows-2025Server-10.0.26100-SP0`
+- Python: `3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]`
 - Pickle default protocol: 4
 - PYTHONHASHSEED: `0`
 
